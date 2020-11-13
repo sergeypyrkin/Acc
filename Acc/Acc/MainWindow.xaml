@@ -18,6 +18,12 @@
 
             <Button Margin="5" MinWidth="100" Click="game_list" Background="White"  Width="Auto"    
                     Height="55">GAME LIST</Button>
+           <StackPanel Margin="100 0 0 0" Orientation="Horizontal">
+               <Label HorizontalContentAlignment="Right" Margin="0 0 0 0" x:Name="ot" Width="100" Content=" -----" Height="28"></Label>
+                <DatePicker Padding="0 15 0 0"  Margin="5"  SelectedDateChanged ="eventhandler"  x:Name="datePicker1" IsDropDownOpen="False"  SelectedDateFormat="Short" Height="55" />
+               <Label HorizontalContentAlignment="Left" Margin="0 0 0 0" x:Name="after" Width="100" Content=" -----" Height="28"></Label>
+
+            </StackPanel>
         </StackPanel>
 
 
