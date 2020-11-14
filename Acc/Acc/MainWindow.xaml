@@ -14,7 +14,7 @@
                     Height="55">ADD GAME</Button>
 
             <Button Margin="5" MinWidth="100" Click="add_players" Background="White"  Width="Auto"    
-                    Height="55">ADD PlAYER</Button>
+                    Height="55">ADD PLAYER</Button>
 
             <Button Margin="5" MinWidth="100" Click="game_list" Background="White"  Width="Auto"    
                     Height="55">GAME LIST</Button>

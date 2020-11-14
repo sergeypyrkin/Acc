@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Acc.Gui;
 
 namespace Acc
 {
@@ -36,6 +37,9 @@ namespace Acc
 
         private void add_players(object sender, RoutedEventArgs e)
         {
+            var form = new UserWindow();
+            form.ShowDialog();
+
         }
 
         private void game_list(object sender, RoutedEventArgs e)
