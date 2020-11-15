@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Acc.Entity;
 using Acc.Gui;
 
 namespace Acc
@@ -21,7 +22,7 @@ namespace Acc
     /// </summary>
     public partial class MainWindow : Window
     {
-
+        public List<Player> players; 
         public DateTime date;
         public MainWindow()
         {
@@ -29,6 +30,7 @@ namespace Acc
             datePicker1.SelectedDate = DateTime.Today;
             date = DateTime.Today;
             changeDate();
+            players = Player.LoadFromFile("players");
         }
 
         private void add_game(object sender, RoutedEventArgs e)
@@ -37,7 +39,7 @@ namespace Acc
 
         private void add_players(object sender, RoutedEventArgs e)
         {
-            var form = new UserWindow();
+            var form = new UserWindow(players);
             form.ShowDialog();
 
         }
