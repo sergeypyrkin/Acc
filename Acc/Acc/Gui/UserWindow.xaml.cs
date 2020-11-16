@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -40,13 +41,24 @@ namespace Acc.Gui
             }
 
             Player p = new Player();
-            p.Id = 0;
+            int id = 0;
+            if (players.Count > 0)
+            {
+                List<int> ids = new List<int>();
+                foreach (var player in players)
+                {
+                    ids.Add(player.Id);
+                }
+                id = ids.Max() + 1;
+            }
+            p.Id = id;
             p.Name = fio.Text;
             p.Description = description.Text;
             p.StartBalance = Convert.ToInt32(price.Text);
             players.Add(p);
 
             Player.SaveToFile("players", players);
+            DialogResult = true;
 
         }
 
@@ -57,6 +69,16 @@ namespace Acc.Gui
             {
                 result = "Поле фио не должно быть пустое";
                 return result;
+            }
+
+            if (fio.Text != "")
+            {
+                Player p = players.FirstOrDefault(o => o.Name == fio.Text && !o.FlagDel);
+                if (p != null)
+                {
+                    result = "Уже есть человек с таким именем";
+                    return result;
+                }
             }
 
             if (price.Text == "")

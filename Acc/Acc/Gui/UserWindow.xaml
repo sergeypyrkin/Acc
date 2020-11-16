@@ -15,7 +15,7 @@
 
             <StackPanel Margin="10" Orientation="Horizontal">
                 <Label Width="120">Начальная сумма*</Label>
-                <TextBox x:Name="price" Margin="100 0 0 0" Width="300"></TextBox>
+                <TextBox x:Name="price" Margin="100 0 0 0" Width="300">0</TextBox>
             </StackPanel>
 
             <StackPanel Margin="10" Orientation="Horizontal">
