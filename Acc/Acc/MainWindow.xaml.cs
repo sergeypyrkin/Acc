@@ -22,8 +22,13 @@ namespace Acc
     /// </summary>
     public partial class MainWindow : Window
     {
-        public List<Player> players; 
+        public List<Player> players;
+        public List<CalendarPlayer> cplayers = new List<CalendarPlayer>();
         public DateTime date;
+
+
+
+
         public MainWindow()
         {
             InitializeComponent();
@@ -31,6 +36,31 @@ namespace Acc
             date = DateTime.Today;
             changeDate();
             players = Player.LoadFromFile("players");
+            ReloadDataGrid();
+
+        }
+
+
+        
+        public void ReloadDataGrid()
+        {
+            cplayers.Clear();
+            foreach (var player in players)
+            {
+                cplayers.Add(new CalendarPlayer(player));
+
+            }
+            cplayers = cplayers.Where(o => !o.FlagDel).OrderBy(o => o.Name).ToList();
+            int number = 1;
+            foreach (var cpl in cplayers)
+            {
+                cpl.Number = number;
+                number = number + 1;
+            }
+
+            datagrid.ItemsSource = cplayers;
+            datagrid.Items.Refresh();
+            
         }
 
         private void add_game(object sender, RoutedEventArgs e)
@@ -41,6 +71,7 @@ namespace Acc
         {
             var form = new UserWindow(players);
             form.ShowDialog();
+            ReloadDataGrid();
 
         }
 

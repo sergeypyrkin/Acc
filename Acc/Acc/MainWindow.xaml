@@ -26,10 +26,15 @@
             </StackPanel>
         </StackPanel>
 
+        <ListView Margin="10" Name="datagrid" DockPanel.Dock="Top">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="#" Width="30" DisplayMemberBinding="{Binding Number}" />
+                    <GridViewColumn Header="Name" Width="150" DisplayMemberBinding="{Binding Name}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
 
-
-        <TextBox TextWrapping="Wrap" x:Name="textblock" DockPanel.Dock="Top" Margin="5" FontSize="12"
-                 BorderBrush="LightBlue" BorderThickness="3"></TextBox>
 
     </DockPanel>
 </Window>

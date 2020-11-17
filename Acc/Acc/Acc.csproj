@@ -70,6 +70,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Entity\CalendarPlayer.cs" />
     <Compile Include="Entity\Player.cs" />
     <Compile Include="Gui\UserWindow.xaml.cs">
       <DependentUpon>UserWindow.xaml</DependentUpon>
