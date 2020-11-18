@@ -25,6 +25,7 @@ namespace Acc
         public List<Player> players;
         public List<CalendarPlayer> cplayers = new List<CalendarPlayer>();
         public DateTime date;
+        private ContextMenu contextMenuDataGrid = new ContextMenu();
 
 
 
@@ -37,11 +38,12 @@ namespace Acc
             changeDate();
             players = Player.LoadFromFile("players");
             ReloadDataGrid();
+            datagrid.ContextMenu = contextMenuDataGrid;
 
         }
 
 
-        
+
         public void ReloadDataGrid()
         {
             cplayers.Clear();
@@ -100,6 +102,59 @@ namespace Acc
         public string dateToString(DateTime d)
         {
             return d.ToString("MMMM dd");
+        }
+
+
+        //selection changed
+        private void dataGridView1_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            contextMenuDataGrid.Items.Clear();
+
+            if (datagrid.SelectedItems.Count == 1)
+            {
+                CalendarPlayer cp = (CalendarPlayer)datagrid.SelectedItems[0];
+                {
+                    MenuItem mi11 = new MenuItem();
+                    mi11.Header = "ДОБАВИТЬ ПЛАТЕЖ";
+                    mi11.Click += mi_add_pay;
+                    mi11.Tag = cp;
+                    contextMenuDataGrid.Items.Add(mi11);
+                }
+
+
+                {
+                    MenuItem mi11 = new MenuItem();
+                    mi11.Header = "РЕДАКТИРОВАТЬ";
+                    mi11.Click += mi_edit_player;
+                    mi11.Tag = cp;
+                    contextMenuDataGrid.Items.Add(mi11);
+                }
+
+                {
+                    MenuItem mi11 = new MenuItem();
+                    mi11.Header = "УДАЛИТЬ ИГРОКА";
+                    mi11.Click += mi_delete_player;
+                    mi11.Tag = cp;
+                    contextMenuDataGrid.Items.Add(mi11);
+                }
+
+            }
+        }
+
+        private void mi_delete_player(object sender, RoutedEventArgs e)
+        {
+        }
+
+
+        //редактирование игрока
+        private void mi_edit_player(object sender, RoutedEventArgs e)
+        {
+        }
+
+
+        //добавить платеж
+        private void mi_add_pay(object sender, RoutedEventArgs e)
+        {
         }
     }
 }

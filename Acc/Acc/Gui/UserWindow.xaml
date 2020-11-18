@@ -25,7 +25,7 @@
             <StackPanel  Margin="10" Orientation="Horizontal">
                 <Label Visibility="Visible"  Width="120"></Label>
 
-                <Button Margin="100 0 0 0" Height="56"  Width="300" Click="createUser"
+                <Button IsDefault="True" Margin="100 0 0 0" Height="56"  Width="300" Click="createUser"
  Content="Создать"/>
 
             </StackPanel>
