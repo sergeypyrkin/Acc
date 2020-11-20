@@ -26,10 +26,6 @@ namespace Acc
         public List<CalendarPlayer> cplayers = new List<CalendarPlayer>();
         public DateTime date;
         private ContextMenu contextMenuDataGrid = new ContextMenu();
-
-
-
-
         public MainWindow()
         {
             InitializeComponent();
@@ -143,18 +139,33 @@ namespace Acc
 
         private void mi_delete_player(object sender, RoutedEventArgs e)
         {
+            CalendarPlayer mk = (sender as MenuItem).Tag as CalendarPlayer;
+            if (MessageBox.Show(String.Format("Вы действительно хотите удалить {0}", mk.player.Name), "Подтверждение"
+                  , MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.No)
+                return;
+            mk.player.FlagDel = true;
+            Player.SaveToFile("players", players);
+            ReloadDataGrid();
         }
 
 
         //редактирование игрока
         private void mi_edit_player(object sender, RoutedEventArgs e)
         {
+
+            CalendarPlayer mk = (sender as MenuItem).Tag as CalendarPlayer;
+            var form = new UserWindow(players, mk.player);
+            form.ShowDialog();
+            Player.SaveToFile("players", players);
+            ReloadDataGrid();
         }
 
 
         //добавить платеж
         private void mi_add_pay(object sender, RoutedEventArgs e)
         {
+
+
         }
     }
 }

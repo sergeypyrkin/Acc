@@ -23,10 +23,26 @@ namespace Acc.Gui
     {
 
         public List<Player> players;
+        private Player player;
+        private string mode = "new";
+
         public UserWindow(List<Player> players)
         {
             InitializeComponent();
             this.players = players;
+            mode = "new";
+        }
+
+        public UserWindow(List<Player> players, Player player)
+        {
+            InitializeComponent();
+            this.players = players;
+            this.player = player;
+            mode = "edit";
+            fio.Text = player.Name;
+            description.Text = player.Description;
+            price.Text = player.StartBalance.ToString();
+
         }
 
 
@@ -40,6 +56,27 @@ namespace Acc.Gui
                 return;
             }
 
+            if (mode == "new")
+            {
+                createPlayer();
+            }
+            if (mode == "edit")
+            {
+                editPlayer();
+            }
+
+            DialogResult = true;
+        }
+
+        public void editPlayer()
+        {
+            player.Name = fio.Text;
+            player.Description = description.Text;
+            player.StartBalance = Convert.ToInt32(price.Text);
+        }
+
+        public void createPlayer()
+        {
             Player p = new Player();
             int id = 0;
             if (players.Count > 0)
@@ -51,6 +88,7 @@ namespace Acc.Gui
                 }
                 id = ids.Max() + 1;
             }
+
             p.Id = id;
             p.Name = fio.Text;
             p.Description = description.Text;
@@ -58,8 +96,6 @@ namespace Acc.Gui
             players.Add(p);
 
             Player.SaveToFile("players", players);
-            DialogResult = true;
-
         }
 
         public string isValidUser()
@@ -73,7 +109,17 @@ namespace Acc.Gui
 
             if (fio.Text != "")
             {
-                Player p = players.FirstOrDefault(o => o.Name == fio.Text && !o.FlagDel);
+                Player p = null;
+                if (mode == "new")
+                {
+                    p = players.FirstOrDefault(o => o.Name == fio.Text && !o.FlagDel);
+                }
+
+                if (mode == "edit")
+                {
+                    p = players.FirstOrDefault(o => o.Name == fio.Text && !o.FlagDel && o.Id != player.Id);
+                }
+
                 if (p != null)
                 {
                     result = "Уже есть человек с таким именем";
