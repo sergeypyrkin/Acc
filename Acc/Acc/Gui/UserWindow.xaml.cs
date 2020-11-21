@@ -117,6 +117,7 @@ namespace Acc.Gui
 
                 if (mode == "edit")
                 {
+
                     p = players.FirstOrDefault(o => o.Name == fio.Text && !o.FlagDel && o.Id != player.Id);
                 }
 

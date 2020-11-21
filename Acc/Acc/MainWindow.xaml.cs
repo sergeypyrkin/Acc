@@ -42,10 +42,14 @@ namespace Acc
 
         public void ReloadDataGrid()
         {
+            if (players == null)
+            {
+                return;
+            }
             cplayers.Clear();
             foreach (var player in players)
             {
-                cplayers.Add(new CalendarPlayer(player));
+                cplayers.Add(new CalendarPlayer(player, date));
 
             }
             cplayers = cplayers.Where(o => !o.FlagDel).OrderBy(o => o.Name).ToList();
@@ -55,6 +59,13 @@ namespace Acc
                 cpl.Number = number;
                 number = number + 1;
             }
+
+            foreach (var cpl in cplayers)
+            {
+                cpl.setValues();
+            }
+
+            hL17.Content = dateToString(date.AddDays(-17));
 
             datagrid.ItemsSource = cplayers;
             datagrid.Items.Refresh();
@@ -83,6 +94,7 @@ namespace Acc
         {
             date = datePicker1.SelectedDate.Value;
             changeDate();
+            ReloadDataGrid();
         }
 
        
@@ -97,7 +109,7 @@ namespace Acc
 
         public string dateToString(DateTime d)
         {
-            return d.ToString("MMMM dd");
+            return d.ToString("dd MMMM");
         }
 
 
