@@ -11,26 +11,13 @@
     mc:Ignorable="d">
 
     <Window.Resources>
-        <Style x:Key="soDataGrid_ColumnHeaderRotateStyle" TargetType="DataGridColumnHeader">
-            <Setter Property="ContentTemplate">
-                <Setter.Value>
-                    <DataTemplate>
-                        <TextBlock
-                            Width="60"
-                            HorizontalAlignment="Center"
-                            VerticalAlignment="Center"
-                            FontWeight="Bold"
-                            Text="{Binding}"
-                            TextAlignment="Center"
-                            TextWrapping="Wrap">
-                            <TextBlock.LayoutTransform>
-                                <RotateTransform Angle="270" />
-                            </TextBlock.LayoutTransform>
-                        </TextBlock>
-                    </DataTemplate>
-                </Setter.Value>
-            </Setter>
-            <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Style TargetType="Label" x:Key="FlatStyleButton">
+
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Cursor" Value="Hand" />
+                </Trigger>
+            </Style.Triggers>
         </Style>
     </Window.Resources>
     <DockPanel
@@ -142,7 +129,7 @@
                         Width="150"
                         DisplayMemberBinding="{Binding Name}"
                         Header="Name" />
-                    <GridViewColumn DisplayMemberBinding="{Binding Name2}" Width="50">
+                    <GridViewColumn Width="80">
                         <GridViewColumn.Header  >
                             <Label x:Name="hL17" Content="14 марта" >
                                 <Label.LayoutTransform>
@@ -153,6 +140,14 @@
                                 </Label.LayoutTransform>
                             </Label>
                         </GridViewColumn.Header>
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Style="{StaticResource FlatStyleButton}" x:Name="gL17" Tag="L17" FontSize="10px" Margin="0" Foreground="Red" MouseUp="UIChangeGame">-400</Label>
+                                    <Label  Style="{StaticResource FlatStyleButton}" x:Name="pL17" Tag="L17" FontSize="10px" Margin="0" Foreground="Green" MouseUp="UIChangePrice">+500</Label>
+                                </StackPanel>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
                     </GridViewColumn>
 
                 </GridView>

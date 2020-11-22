@@ -179,5 +179,17 @@ namespace Acc
 
 
         }
+
+        private void UIElement_OnMouseUp(object sender, MouseButtonEventArgs e)
+        {
+        }
+
+        private void UIChangeGame(object sender, MouseButtonEventArgs e)
+        {
+        }
+
+        private void UIChangePrice(object sender, MouseButtonEventArgs e)
+        {
+        }
     }
 }
