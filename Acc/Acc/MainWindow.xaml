@@ -11,7 +11,11 @@
     mc:Ignorable="d">
 
     <Window.Resources>
-        <Style TargetType="Label" x:Key="FlatStyleButton">
+        <Style TargetType="Label" x:Key="FlatStyleButton1">
+            <Setter Property="FontSize" Value="10" />
+            <Setter Property="Margin" Value="-7 0 5 0" />
+            <Setter Property="Padding" Value="0" />
+            <Setter Property="Foreground" Value="Red" />
 
             <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="True">
@@ -19,6 +23,21 @@
                 </Trigger>
             </Style.Triggers>
         </Style>
+
+        <Style TargetType="Label" x:Key="FlatStyleButton2">
+            <Setter Property="FontSize" Value="10" />
+            <Setter Property="Margin" Value="0" />
+            <Setter Property="Padding" Value="0" />
+            <Setter Property="Foreground" Value="Green" />
+
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Cursor" Value="Hand" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+
     </Window.Resources>
     <DockPanel
         MinWidth="400"
@@ -129,7 +148,7 @@
                         Width="150"
                         DisplayMemberBinding="{Binding Name}"
                         Header="Name" />
-                    <GridViewColumn Width="80">
+                    <GridViewColumn Width="60">
                         <GridViewColumn.Header  >
                             <Label x:Name="hL17" Content="14 марта" >
                                 <Label.LayoutTransform>
@@ -143,13 +162,12 @@
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal">
-                                    <Label Style="{StaticResource FlatStyleButton}" x:Name="gL17" Tag="L17" FontSize="10px" Margin="0" Foreground="Red" MouseUp="UIChangeGame">-400</Label>
-                                    <Label  Style="{StaticResource FlatStyleButton}" x:Name="pL17" Tag="L17" FontSize="10px" Margin="0" Foreground="Green" MouseUp="UIChangePrice">+500</Label>
+                                    <Label Style="{StaticResource FlatStyleButton1}"  x:Name="gL17" Tag="L17"    MouseUp="UIChangeGame">-400</Label>
+                                    <Label  Style="{StaticResource FlatStyleButton2}"  x:Name="pL17" Tag="L17"  MouseUp="UIChangePrice">+1000</Label>
                                 </StackPanel>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
-
                 </GridView>
             </ListView.View>
         </ListView>
