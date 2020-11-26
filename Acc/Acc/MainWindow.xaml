@@ -148,11 +148,74 @@
                         Width="150"
                         DisplayMemberBinding="{Binding Name}"
                         Header="Name" />
+
                     <GridViewColumn Width="60">
-                        
-                        
-                        
-                        
+                        <GridViewColumn.Header  >
+                            <Label x:Name="hL20" Content="14 марта" >
+                                <Label.LayoutTransform>
+                                    <TransformGroup>
+                                        <RotateTransform Angle="90" />
+                                        <ScaleTransform ScaleX="-1" ScaleY="-1" />
+                                    </TransformGroup>
+                                </Label.LayoutTransform>
+                            </Label>
+                        </GridViewColumn.Header>
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Style="{StaticResource FlatStyleButton1}"  x:Name="gL20" Tag="L20"    MouseUp="UIChangeGame">-400</Label>
+                                    <Label  Style="{StaticResource FlatStyleButton2}"  x:Name="pL20" Tag="L20"  MouseUp="UIChangePrice">+1000</Label>
+                                </StackPanel>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+
+
+                    <GridViewColumn Width="60">
+                        <GridViewColumn.Header  >
+                            <Label x:Name="hL19" Content="14 марта" >
+                                <Label.LayoutTransform>
+                                    <TransformGroup>
+                                        <RotateTransform Angle="90" />
+                                        <ScaleTransform ScaleX="-1" ScaleY="-1" />
+                                    </TransformGroup>
+                                </Label.LayoutTransform>
+                            </Label>
+                        </GridViewColumn.Header>
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Style="{StaticResource FlatStyleButton1}"  x:Name="gL19" Tag="L19"    MouseUp="UIChangeGame">-400</Label>
+                                    <Label  Style="{StaticResource FlatStyleButton2}"  x:Name="pL19" Tag="L19"  MouseUp="UIChangePrice">+1000</Label>
+                                </StackPanel>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+
+
+                    <GridViewColumn Width="60">
+                        <GridViewColumn.Header  >
+                            <Label x:Name="hL18" Content="14 марта" >
+                                <Label.LayoutTransform>
+                                    <TransformGroup>
+                                        <RotateTransform Angle="90" />
+                                        <ScaleTransform ScaleX="-1" ScaleY="-1" />
+                                    </TransformGroup>
+                                </Label.LayoutTransform>
+                            </Label>
+                        </GridViewColumn.Header>
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Style="{StaticResource FlatStyleButton1}"  x:Name="gL18" Tag="L18"    MouseUp="UIChangeGame">-400</Label>
+                                    <Label  Style="{StaticResource FlatStyleButton2}"  x:Name="pL18" Tag="L18"  MouseUp="UIChangePrice">+1000</Label>
+                                </StackPanel>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+
+
+                    <GridViewColumn Width="60">
                         <GridViewColumn.Header  >
                             <Label x:Name="hL17" Content="14 марта" >
                                 <Label.LayoutTransform>
@@ -550,6 +613,11 @@
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
+
+                    <GridViewColumn
+                        Width="75"
+                        DisplayMemberBinding="{Binding Balance}"
+                        Header="Баланс" />
 
                     <GridViewColumn
                         Width="150"
