@@ -65,7 +65,28 @@ namespace Acc
                 cpl.setValues();
             }
 
+            hL20.Content = dateToString(date.AddDays(-20));
+            hL19.Content = dateToString(date.AddDays(-19));
+            hL18.Content = dateToString(date.AddDays(-18));
             hL17.Content = dateToString(date.AddDays(-17));
+            hL16.Content = dateToString(date.AddDays(-16));
+            hL15.Content = dateToString(date.AddDays(-15));
+            hL14.Content = dateToString(date.AddDays(-14));
+            hL13.Content = dateToString(date.AddDays(-13));
+            hL12.Content = dateToString(date.AddDays(-12));
+            hL11.Content = dateToString(date.AddDays(-11));
+            hL10.Content = dateToString(date.AddDays(-10));
+            hL9.Content = dateToString(date.AddDays(-9));
+            hL8.Content = dateToString(date.AddDays(-8));
+            hL7.Content = dateToString(date.AddDays(-7));
+            hL6.Content = dateToString(date.AddDays(-6));
+            hL5.Content = dateToString(date.AddDays(-5));
+            hL4.Content = dateToString(date.AddDays(-4));
+            hL3.Content = dateToString(date.AddDays(-3));
+            hL2.Content = dateToString(date.AddDays(-2));
+            hL1.Content = dateToString(date.AddDays(-1));
+            hL.Content = dateToString(date.AddDays(0));
+
 
             datagrid.ItemsSource = cplayers;
             datagrid.Items.Refresh();
@@ -102,8 +123,6 @@ namespace Acc
         {
             DateTime d1 = date.AddDays(-27);
             DateTime d2 = date.AddDays(+3);
-            this.ot.Content = dateToString(d1);
-            this.after.Content = dateToString(d2);
 
         }
 

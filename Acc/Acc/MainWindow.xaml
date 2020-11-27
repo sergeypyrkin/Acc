@@ -76,13 +76,6 @@
                 GAME LIST
             </Button>
             <StackPanel Margin="100,0,0,0" Orientation="Horizontal">
-                <Label
-                    x:Name="ot"
-                    Width="100"
-                    Height="28"
-                    Margin="0,0,0,0"
-                    HorizontalContentAlignment="Right"
-                    Content=" -----" />
                 <DatePicker
                     x:Name="datePicker1"
                     Height="55"
@@ -91,13 +84,6 @@
                     IsDropDownOpen="False"
                     SelectedDateChanged="eventhandler"
                     SelectedDateFormat="Short" />
-                <Label
-                    x:Name="after"
-                    Width="100"
-                    Height="28"
-                    Margin="0,0,0,0"
-                    HorizontalContentAlignment="Left"
-                    Content=" -----" />
 
             </StackPanel>
         </StackPanel>
