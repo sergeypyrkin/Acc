@@ -7,7 +7,8 @@
     Title="ВОЛЕЙБОЛЛ"
     Width="1200"
     Height="850"
-    WindowStartupLocation="CenterOwner"
+    WindowState="Maximized"
+    WindowStartupLocation="CenterScreen"
     mc:Ignorable="d">
 
     <Window.Resources>
@@ -99,6 +100,7 @@
             Foreground="#FF000000"
             IsTextSearchEnabled="False"
             KeyboardNavigation.DirectionalNavigation="Cycle"
+            MouseDoubleClick="Datagrid_OnMouseDoubleClick"
             SelectionChanged="dataGridView1_SelectionChanged">
             <ListView.ItemContainerStyle>
 

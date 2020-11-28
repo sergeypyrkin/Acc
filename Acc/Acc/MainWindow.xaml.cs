@@ -196,6 +196,8 @@ namespace Acc
         private void mi_add_pay(object sender, RoutedEventArgs e)
         {
 
+            CalendarPlayer mk = (sender as MenuItem).Tag as CalendarPlayer;
+            addPayment(mk);
 
         }
 
@@ -209,6 +211,26 @@ namespace Acc
 
         private void UIChangePrice(object sender, MouseButtonEventArgs e)
         {
+        }
+
+
+        private void Datagrid_OnMouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (datagrid.SelectedItems.Count == 0)
+            {
+                return;
+            }
+            var item = datagrid.SelectedItems[0];
+            CalendarPlayer mk = item as CalendarPlayer;
+            addPayment(mk);
+        }
+
+        private void  addPayment(CalendarPlayer mk)
+        {
+            var form = new PaymentWindow(mk);
+            form.ShowDialog();
+            //Player.SaveToFile("players", players);
+            ReloadDataGrid();
         }
     }
 }
