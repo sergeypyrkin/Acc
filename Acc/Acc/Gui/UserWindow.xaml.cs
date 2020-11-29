@@ -95,7 +95,7 @@ namespace Acc.Gui
             p.StartBalance = Convert.ToInt32(price.Text);
             players.Add(p);
 
-            Player.SaveToFile("players", players);
+            Player.SaveToFile(players);
         }
 
         public string isValidUser()

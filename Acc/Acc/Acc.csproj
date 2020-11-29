@@ -75,6 +75,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Entity\CalendarPlayer.cs" />
+    <Compile Include="Entity\Payment.cs" />
     <Compile Include="Entity\Player.cs" />
     <Compile Include="Gui\PaymentWindow.xaml.cs">
       <DependentUpon>PaymentWindow.xaml</DependentUpon>

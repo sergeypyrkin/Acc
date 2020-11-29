@@ -11,15 +11,15 @@ using System.Windows;
 namespace Acc.Entity
 {
     [Serializable()]
-    public class Player
+    public class Payment
     {
 
         public int Id { get; set; }
-        public string Name { get; set; }
-        public int StartBalance { get; set; }
-        public bool FlagDel { get; set; }
-        public string Description { get; set; }
-        public static string _NAME = "players";
+        public DateTime date { get; set; }
+        public Player player { get; set; }
+        public int price { get; set; }
+        public static string _NAME = "payments";
+
 
         private static object lofile = new object();
 
@@ -35,7 +35,7 @@ namespace Acc.Entity
             return new System.IO.FileInfo(Assembly.GetEntryAssembly().Location).DirectoryName + @"\db";
         }
 
-        public static void SaveToFile(List<Player> accounts)
+        public static void SaveToFile(String name, List<Payment> payments)
         {
             lock (lofile)
             {
@@ -56,7 +56,7 @@ namespace Acc.Entity
                         new FileStream(LogfileName(), FileMode.Create, FileAccess.Write))
                     {
                         BinaryFormatter formatter = new BinaryFormatter();
-                        formatter.Serialize(serializationStream, accounts);
+                        formatter.Serialize(serializationStream, payments);
                     }
                 }
                 catch (Exception exc)
@@ -69,7 +69,7 @@ namespace Acc.Entity
         }
 
 
-        public static List<Player> LoadFromFile()
+        public static List<Payment> LoadFromFile()
         {
             lock (lofile)
             {
@@ -77,7 +77,7 @@ namespace Acc.Entity
 
 
                 if (!File.Exists(fn))
-                    return new List<Player>();
+                    return new List<Payment>();
 
 
                 try
@@ -85,9 +85,9 @@ namespace Acc.Entity
                     using (Stream serializationStream = new FileStream(fn, FileMode.Open, FileAccess.Read))
                     {
                         BinaryFormatter formatter = new BinaryFormatter();
-                        List<Player> sav = (List<Player>)formatter.Deserialize(serializationStream);
-                        List<Player> res = new List<Player>();
-                        foreach (Player acc in sav)
+                        List<Payment> sav = (List<Payment>)formatter.Deserialize(serializationStream);
+                        List<Payment> res = new List<Payment>();
+                        foreach (Payment acc in sav)
                             if (acc != null)
                             {
 
@@ -100,7 +100,7 @@ namespace Acc.Entity
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
-                    return new List<Player>();
+                    return new List<Payment>();
                 }
             }
 

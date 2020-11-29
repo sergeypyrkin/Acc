@@ -32,7 +32,7 @@ namespace Acc
             datePicker1.SelectedDate = DateTime.Today;
             date = DateTime.Today;
             changeDate();
-            players = Player.LoadFromFile("players");
+            players = Player.LoadFromFile();
             ReloadDataGrid();
             datagrid.ContextMenu = contextMenuDataGrid;
 
@@ -175,7 +175,7 @@ namespace Acc
                   , MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.No)
                 return;
             mk.player.FlagDel = true;
-            Player.SaveToFile("players", players);
+            Player.SaveToFile(players);
             ReloadDataGrid();
         }
 
@@ -187,7 +187,7 @@ namespace Acc
             CalendarPlayer mk = (sender as MenuItem).Tag as CalendarPlayer;
             var form = new UserWindow(players, mk.player);
             form.ShowDialog();
-            Player.SaveToFile("players", players);
+            Player.SaveToFile(players);
             ReloadDataGrid();
         }
 
