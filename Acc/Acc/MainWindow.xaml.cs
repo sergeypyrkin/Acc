@@ -23,6 +23,8 @@ namespace Acc
     public partial class MainWindow : Window
     {
         public List<Player> players;
+        public List<Payment> payments;
+
         public List<CalendarPlayer> cplayers = new List<CalendarPlayer>();
         public DateTime date;
         private ContextMenu contextMenuDataGrid = new ContextMenu();
@@ -33,6 +35,7 @@ namespace Acc
             date = DateTime.Today;
             changeDate();
             players = Player.LoadFromFile();
+            payments = Payment.LoadFromFile();
             ReloadDataGrid();
             datagrid.ContextMenu = contextMenuDataGrid;
 
@@ -227,7 +230,7 @@ namespace Acc
 
         private void  addPayment(CalendarPlayer mk)
         {
-            var form = new PaymentWindow(mk);
+            var form = new PaymentWindow(mk, payments);
             form.ShowDialog();
             //Player.SaveToFile("players", players);
             ReloadDataGrid();

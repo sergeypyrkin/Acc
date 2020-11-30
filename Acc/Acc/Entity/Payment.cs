@@ -16,7 +16,7 @@ namespace Acc.Entity
 
         public int Id { get; set; }
         public DateTime date { get; set; }
-        public Player player { get; set; }
+        public int playerId { get; set; }
         public int price { get; set; }
         public static string _NAME = "payments";
 
@@ -35,7 +35,7 @@ namespace Acc.Entity
             return new System.IO.FileInfo(Assembly.GetEntryAssembly().Location).DirectoryName + @"\db";
         }
 
-        public static void SaveToFile(String name, List<Payment> payments)
+        public static void SaveToFile(List<Payment> payments)
         {
             lock (lofile)
             {
