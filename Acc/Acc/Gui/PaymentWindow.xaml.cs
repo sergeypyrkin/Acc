@@ -29,6 +29,7 @@ namespace Acc.Gui
             this.payments = payments;
             InitializeComponent();
             datePicker1.SelectedDate = DateTime.Today;
+            nameUser.Content = cplayer.Name;
 
         }
 
@@ -97,6 +98,22 @@ namespace Acc.Gui
                     return result;
                 }
 
+            }
+
+            if (price.Text == "0")
+            {
+                 
+                    result = "Платеж не может быть нулевым";
+                    return result;
+                
+            }
+
+
+            DateTime dt = datePicker1.DisplayDate;
+            if (payments.Exists(o => o.date == dt && o.playerId == cplayer.Id))
+            {
+                result = "У этого человека в этот день уже есть платеж";
+                return result;
             }
             return "";
         }
