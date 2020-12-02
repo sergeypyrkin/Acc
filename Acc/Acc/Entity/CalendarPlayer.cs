@@ -65,25 +65,43 @@ namespace Acc.Entity
 
 
 
-        public void setValues()
+        internal void setValues(DateTime date, Dictionary<string, Payment> pdict)
         {
-            setValues(-17);
+            pl20 = getPayment(20, date, pdict);
+            pl19 = getPayment(19, date, pdict);
+            pl18 = getPayment(18, date, pdict);
+            pl17 = getPayment(17, date, pdict);
+            pl16 = getPayment(16, date, pdict);
+            pl15 = getPayment(15, date, pdict);
+            pl14 = getPayment(14, date, pdict);
+            pl13 = getPayment(13, date, pdict);
+            pl12 = getPayment(12, date, pdict);
+            pl11 = getPayment(11, date, pdict);
+            pl10 = getPayment(10, date, pdict);
+            pl9 = getPayment(9, date, pdict);
+            pl8 = getPayment(8, date, pdict);
+            pl7 = getPayment(7, date, pdict);
+            pl6 = getPayment(6, date, pdict);
+            pl5 = getPayment(5, date, pdict);
+            pl4 = getPayment(4, date, pdict);
+            pl3 = getPayment(3, date, pdict);
+            pl2 = getPayment(2, date, pdict);
+            pl1 = getPayment(1, date, pdict);
+            pl = getPayment(0, date, pdict);
 
         }
 
-        private void setValues(int v)
+        private string getPayment(int i, DateTime date, Dictionary<string, Payment> pdict)
         {
-            DateTime d1 = coreDay.AddDays(v);
-
-            switch (v)
+            DateTime currDateTime = date.AddDays(-i);
+            string t = String.Format("{0}_{1}", player.Id, currDateTime.ToString());
+            if (!pdict.ContainsKey(t))
             {
-                case -17:
-                {
-                    DayL17 = dateToString(d1);
-                    break;
-                }
+                return "";
             }
-            return;
+            Payment payment = pdict[t];
+            return "+" + payment.price;
+
         }
     }
 }

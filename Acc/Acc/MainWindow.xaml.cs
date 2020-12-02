@@ -63,16 +63,16 @@ namespace Acc
                 number = number + 1;
             }
 
-            foreach (var cpl in cplayers)
-            {
-                cpl.setValues();
-            }
-
             Dictionary<string, Payment> pdict = new Dictionary<string, Payment>();
             foreach (Payment p in payments)
             {
                 string t = String.Format("{0}_{1}", p.playerId, p.date.ToString());
                 pdict.Add(t,p);
+            }
+
+            foreach (var cpl in cplayers)
+            {
+                cpl.setValues(date, pdict);
             }
 
             hL20.Content = dateToString(date.AddDays(-20));
