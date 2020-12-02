@@ -151,8 +151,8 @@
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal">
-                                    <Label Style="{StaticResource FlatStyleButton1}"  x:Name="gL20" Tag="L20"    MouseUp="UIChangeGame">-400</Label>
-                                    <Label  Style="{StaticResource FlatStyleButton2}"  x:Name="pL20" Tag="L20"  MouseUp="UIChangePrice">+1000</Label>
+                                    <Label Style="{StaticResource FlatStyleButton1}"  Tag="L20"    MouseUp="UIChangeGame">-400</Label>
+                                    <Label  Style="{StaticResource FlatStyleButton2}"   Tag="L20"  MouseUp="UIChangePrice">+1000</Label>
                                 </StackPanel>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
@@ -173,8 +173,8 @@
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal">
-                                    <Label Style="{StaticResource FlatStyleButton1}"  x:Name="gL19" Tag="L19"    MouseUp="UIChangeGame">-400</Label>
-                                    <Label  Style="{StaticResource FlatStyleButton2}"  x:Name="pL19" Tag="L19"  MouseUp="UIChangePrice">+1000</Label>
+                                    <Label Style="{StaticResource FlatStyleButton1}"  Tag="L19"    MouseUp="UIChangeGame">-400</Label>
+                                    <Label  Style="{StaticResource FlatStyleButton2}"   Tag="L19"  MouseUp="UIChangePrice">+1000</Label>
                                 </StackPanel>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
@@ -195,8 +195,8 @@
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal">
-                                    <Label Style="{StaticResource FlatStyleButton1}"  x:Name="gL18" Tag="L18"    MouseUp="UIChangeGame">-400</Label>
-                                    <Label  Style="{StaticResource FlatStyleButton2}"  x:Name="pL18" Tag="L18"  MouseUp="UIChangePrice">+1000</Label>
+                                    <Label Style="{StaticResource FlatStyleButton1}"   Tag="L18"    MouseUp="UIChangeGame">-400</Label>
+                                    <Label  Style="{StaticResource FlatStyleButton2}"   Tag="L18"  MouseUp="UIChangePrice">+1000</Label>
                                 </StackPanel>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
@@ -217,8 +217,8 @@
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal">
-                                    <Label Style="{StaticResource FlatStyleButton1}"  x:Name="gL17" Tag="L17"    MouseUp="UIChangeGame">-400</Label>
-                                    <Label  Style="{StaticResource FlatStyleButton2}"  x:Name="pL17" Tag="L17"  MouseUp="UIChangePrice">+1000</Label>
+                                    <Label Style="{StaticResource FlatStyleButton1}"   Tag="L17"    MouseUp="UIChangeGame">-400</Label>
+                                    <Label  Style="{StaticResource FlatStyleButton2}"   Tag="L17"  MouseUp="UIChangePrice">+1000</Label>
                                 </StackPanel>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
@@ -239,8 +239,8 @@
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal">
-                                    <Label Style="{StaticResource FlatStyleButton1}"  x:Name="gL16" Tag="L16"    MouseUp="UIChangeGame">-400</Label>
-                                    <Label  Style="{StaticResource FlatStyleButton2}"  x:Name="pL16" Tag="L16"  MouseUp="UIChangePrice">+1000</Label>
+                                    <Label Style="{StaticResource FlatStyleButton1}"   Tag="L16"    MouseUp="UIChangeGame">-400</Label>
+                                    <Label  Style="{StaticResource FlatStyleButton2}"   Tag="L16"  MouseUp="UIChangePrice">+1000</Label>
                                 </StackPanel>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
@@ -261,8 +261,8 @@
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal">
-                                    <Label Style="{StaticResource FlatStyleButton1}"  x:Name="gL15" Tag="L15"    MouseUp="UIChangeGame">-400</Label>
-                                    <Label  Style="{StaticResource FlatStyleButton2}"  x:Name="pL15" Tag="L15"  MouseUp="UIChangePrice">+1000</Label>
+                                    <Label Style="{StaticResource FlatStyleButton1}"   Tag="L15"    MouseUp="UIChangeGame">-400</Label>
+                                    <Label  Style="{StaticResource FlatStyleButton2}"   Tag="L15"  MouseUp="UIChangePrice">+1000</Label>
                                 </StackPanel>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
@@ -284,8 +284,8 @@
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal">
-                                    <Label Style="{StaticResource FlatStyleButton1}"  x:Name="gL14" Tag="L14"    MouseUp="UIChangeGame">-400</Label>
-                                    <Label  Style="{StaticResource FlatStyleButton2}"  x:Name="pL14" Tag="L14"  MouseUp="UIChangePrice">+1000</Label>
+                                    <Label Style="{StaticResource FlatStyleButton1}"   Tag="L14"    MouseUp="UIChangeGame">-400</Label>
+                                    <Label  Style="{StaticResource FlatStyleButton2}"   Tag="L14"  MouseUp="UIChangePrice">+1000</Label>
                                 </StackPanel>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
@@ -307,8 +307,8 @@
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal">
-                                    <Label Style="{StaticResource FlatStyleButton1}"  x:Name="gL13" Tag="L13"    MouseUp="UIChangeGame">-400</Label>
-                                    <Label  Style="{StaticResource FlatStyleButton2}"  x:Name="pL13" Tag="L13"  MouseUp="UIChangePrice">+1000</Label>
+                                    <Label Style="{StaticResource FlatStyleButton1}"  Tag="L13"    MouseUp="UIChangeGame">-400</Label>
+                                    <Label  Style="{StaticResource FlatStyleButton2}"   Tag="L13"  MouseUp="UIChangePrice">+1000</Label>
                                 </StackPanel>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
@@ -329,8 +329,8 @@
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal">
-                                    <Label Style="{StaticResource FlatStyleButton1}"  x:Name="gL12" Tag="L12"    MouseUp="UIChangeGame">-400</Label>
-                                    <Label  Style="{StaticResource FlatStyleButton2}"  x:Name="pL12" Tag="L12"  MouseUp="UIChangePrice">+1000</Label>
+                                    <Label Style="{StaticResource FlatStyleButton1}"  Tag="L12"    MouseUp="UIChangeGame">-400</Label>
+                                    <Label  Style="{StaticResource FlatStyleButton2}"  Tag="L12"  MouseUp="UIChangePrice">+1000</Label>
                                 </StackPanel>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
@@ -351,8 +351,8 @@
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal">
-                                    <Label Style="{StaticResource FlatStyleButton1}"  x:Name="gL11" Tag="L11"    MouseUp="UIChangeGame">-400</Label>
-                                    <Label  Style="{StaticResource FlatStyleButton2}"  x:Name="pL11" Tag="L11"  MouseUp="UIChangePrice">+1000</Label>
+                                    <Label Style="{StaticResource FlatStyleButton1}"   Tag="L11"    MouseUp="UIChangeGame">-400</Label>
+                                    <Label  Style="{StaticResource FlatStyleButton2}"  Tag="L11"  MouseUp="UIChangePrice">+1000</Label>
                                 </StackPanel>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
@@ -373,8 +373,8 @@
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal">
-                                    <Label Style="{StaticResource FlatStyleButton1}"  x:Name="gL10" Tag="L10"    MouseUp="UIChangeGame">-400</Label>
-                                    <Label  Style="{StaticResource FlatStyleButton2}"  x:Name="pL10" Tag="L10"  MouseUp="UIChangePrice">+1000</Label>
+                                    <Label Style="{StaticResource FlatStyleButton1}"   Tag="L10"    MouseUp="UIChangeGame">-400</Label>
+                                    <Label  Style="{StaticResource FlatStyleButton2}"   Tag="L10"  MouseUp="UIChangePrice">+1000</Label>
                                 </StackPanel>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
@@ -395,8 +395,8 @@
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal">
-                                    <Label Style="{StaticResource FlatStyleButton1}"  x:Name="gL9" Tag="L9"    MouseUp="UIChangeGame">-400</Label>
-                                    <Label  Style="{StaticResource FlatStyleButton2}"  x:Name="pL9" Tag="L9"  MouseUp="UIChangePrice">+1000</Label>
+                                    <Label Style="{StaticResource FlatStyleButton1}"   Tag="L9"    MouseUp="UIChangeGame">-400</Label>
+                                    <Label  Style="{StaticResource FlatStyleButton2}"   Tag="L9"  MouseUp="UIChangePrice">+1000</Label>
                                 </StackPanel>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
@@ -417,8 +417,8 @@
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal">
-                                    <Label Style="{StaticResource FlatStyleButton1}"  x:Name="gL8" Tag="L8"    MouseUp="UIChangeGame">-400</Label>
-                                    <Label  Style="{StaticResource FlatStyleButton2}"  x:Name="pL8" Tag="L8"  MouseUp="UIChangePrice">+1000</Label>
+                                    <Label Style="{StaticResource FlatStyleButton1}"   Tag="L8"    MouseUp="UIChangeGame">-400</Label>
+                                    <Label  Style="{StaticResource FlatStyleButton2}"   Tag="L8"  MouseUp="UIChangePrice">+1000</Label>
                                 </StackPanel>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
@@ -439,8 +439,8 @@
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal">
-                                    <Label Style="{StaticResource FlatStyleButton1}"  x:Name="gL7" Tag="L7"    MouseUp="UIChangeGame">-400</Label>
-                                    <Label  Style="{StaticResource FlatStyleButton2}"  x:Name="pL7" Tag="L7"  MouseUp="UIChangePrice">+1000</Label>
+                                    <Label Style="{StaticResource FlatStyleButton1}"  Tag="L7"    MouseUp="UIChangeGame">-400</Label>
+                                    <Label  Style="{StaticResource FlatStyleButton2}"   Tag="L7"  MouseUp="UIChangePrice">+1000</Label>
                                 </StackPanel>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
@@ -461,8 +461,8 @@
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal">
-                                    <Label Style="{StaticResource FlatStyleButton1}"  x:Name="gL6" Tag="L6"    MouseUp="UIChangeGame">-400</Label>
-                                    <Label  Style="{StaticResource FlatStyleButton2}"  x:Name="pL6" Tag="L6"  MouseUp="UIChangePrice">+1000</Label>
+                                    <Label Style="{StaticResource FlatStyleButton1}"   Tag="L6"    MouseUp="UIChangeGame">-400</Label>
+                                    <Label  Style="{StaticResource FlatStyleButton2}"   Tag="L6"  MouseUp="UIChangePrice">+1000</Label>
                                 </StackPanel>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
@@ -483,8 +483,8 @@
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal">
-                                    <Label Style="{StaticResource FlatStyleButton1}"  x:Name="gL5" Tag="L5"    MouseUp="UIChangeGame">-400</Label>
-                                    <Label  Style="{StaticResource FlatStyleButton2}"  x:Name="pL5" Tag="L5"  MouseUp="UIChangePrice">+1000</Label>
+                                    <Label Style="{StaticResource FlatStyleButton1}"   Tag="L5"    MouseUp="UIChangeGame">-400</Label>
+                                    <Label  Style="{StaticResource FlatStyleButton2}"   Tag="L5"  MouseUp="UIChangePrice">+1000</Label>
                                 </StackPanel>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
@@ -505,8 +505,8 @@
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal">
-                                    <Label Style="{StaticResource FlatStyleButton1}"  x:Name="gL4" Tag="L4"    MouseUp="UIChangeGame">-400</Label>
-                                    <Label  Style="{StaticResource FlatStyleButton2}"  x:Name="pL4" Tag="L4"  MouseUp="UIChangePrice">+1000</Label>
+                                    <Label Style="{StaticResource FlatStyleButton1}"   Tag="L4"    MouseUp="UIChangeGame">-400</Label>
+                                    <Label  Style="{StaticResource FlatStyleButton2}"   Tag="L4"  MouseUp="UIChangePrice">+1000</Label>
                                 </StackPanel>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
@@ -527,8 +527,8 @@
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal">
-                                    <Label Style="{StaticResource FlatStyleButton1}"  x:Name="gL3" Tag="L3"    MouseUp="UIChangeGame">-400</Label>
-                                    <Label  Style="{StaticResource FlatStyleButton2}"  x:Name="pL3" Tag="L3"  MouseUp="UIChangePrice">+1000</Label>
+                                    <Label Style="{StaticResource FlatStyleButton1}"  Tag="L3"    MouseUp="UIChangeGame">-400</Label>
+                                    <Label  Style="{StaticResource FlatStyleButton2}"   Tag="L3"  MouseUp="UIChangePrice">+1000</Label>
                                 </StackPanel>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
@@ -550,8 +550,8 @@
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal">
-                                    <Label Style="{StaticResource FlatStyleButton1}"  x:Name="gL2" Tag="L2"    MouseUp="UIChangeGame">-400</Label>
-                                    <Label  Style="{StaticResource FlatStyleButton2}"  x:Name="pL2" Tag="L2"  MouseUp="UIChangePrice">+1000</Label>
+                                    <Label Style="{StaticResource FlatStyleButton1}"   Tag="L2"    MouseUp="UIChangeGame">-400</Label>
+                                    <Label  Style="{StaticResource FlatStyleButton2}"   Tag="L2"  MouseUp="UIChangePrice">+1000</Label>
                                 </StackPanel>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
@@ -573,8 +573,8 @@
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal">
-                                    <Label Style="{StaticResource FlatStyleButton1}"  x:Name="gL1" Tag="L1"    MouseUp="UIChangeGame">-400</Label>
-                                    <Label  Style="{StaticResource FlatStyleButton2}"  x:Name="pL1" Tag="L1"  MouseUp="UIChangePrice">+1000</Label>
+                                    <Label Style="{StaticResource FlatStyleButton1}"   Tag="L1"    MouseUp="UIChangeGame">-400</Label>
+                                    <Label  Style="{StaticResource FlatStyleButton2}"   Tag="L1"  MouseUp="UIChangePrice">+1000</Label>
                                 </StackPanel>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
@@ -595,8 +595,8 @@
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal">
-                                    <Label Style="{StaticResource FlatStyleButton1}"  x:Name="gL" Tag="L"    MouseUp="UIChangeGame">-400</Label>
-                                    <Label  Style="{StaticResource FlatStyleButton2}"  x:Name="pL" Tag="L"  MouseUp="UIChangePrice">+1000</Label>
+                                    <Label Style="{StaticResource FlatStyleButton1}"   Tag="L"    MouseUp="UIChangeGame">-400</Label>
+                                    <Label  Style="{StaticResource FlatStyleButton2}"   Tag="L"  MouseUp="UIChangePrice">+1000</Label>
                                 </StackPanel>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>

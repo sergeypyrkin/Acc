@@ -68,6 +68,13 @@ namespace Acc
                 cpl.setValues();
             }
 
+            Dictionary<string, Payment> pdict = new Dictionary<string, Payment>();
+            foreach (Payment p in payments)
+            {
+                string t = String.Format("{0}_{1}", p.playerId, p.date.ToString());
+                pdict.Add(t,p);
+            }
+
             hL20.Content = dateToString(date.AddDays(-20));
             hL19.Content = dateToString(date.AddDays(-19));
             hL18.Content = dateToString(date.AddDays(-18));
@@ -89,7 +96,7 @@ namespace Acc
             hL2.Content = dateToString(date.AddDays(-2));
             hL1.Content = dateToString(date.AddDays(-1));
             hL.Content = dateToString(date.AddDays(0));
-
+            
 
             datagrid.ItemsSource = cplayers;
             datagrid.Items.Refresh();

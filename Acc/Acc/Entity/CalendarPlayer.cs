@@ -41,6 +41,30 @@ namespace Acc.Entity
         public string PayL17 { get; set; }
 
 
+        public string pl20 { get; set; }
+        public string pl19 { get; set; }
+        public string pl18 { get; set; }
+        public string pl17 { get; set; }
+        public string pl16 { get; set; }
+        public string pl15 { get; set; }
+        public string pl14 { get; set; }
+        public string pl13 { get; set; }
+        public string pl12 { get; set; }
+        public string pl11 { get; set; }
+        public string pl10 { get; set; }
+        public string pl9 { get; set; }
+        public string pl8 { get; set; }
+        public string pl7 { get; set; }
+        public string pl6 { get; set; }
+        public string pl5 { get; set; }
+        public string pl4 { get; set; }
+        public string pl3 { get; set; }
+        public string pl2 { get; set; }
+        public string pl1 { get; set; }
+        public string pl { get; set; }
+
+
+
         public void setValues()
         {
             setValues(-17);
