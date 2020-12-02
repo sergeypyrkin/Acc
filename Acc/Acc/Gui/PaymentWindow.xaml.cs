@@ -33,6 +33,8 @@ namespace Acc.Gui
 
         }
 
+
+
         private void createPayment(object sender, RoutedEventArgs e)
         {
             string validText = isValidPayment();
@@ -63,7 +65,7 @@ namespace Acc.Gui
 
             payment.Id = id;
             payment.playerId = cplayer.Id;
-            payment.date = datePicker1.DisplayDate;
+            payment.date = (DateTime) datePicker1.SelectedDate;
             payment.price = Convert.ToInt32(price.Text);
             payments.Add(payment);
 
@@ -109,9 +111,10 @@ namespace Acc.Gui
             }
 
 
-            DateTime dt = datePicker1.DisplayDate;
+            var dt = datePicker1.SelectedDate;
             if (payments.Exists(o => o.date == dt && o.playerId == cplayer.Id))
             {
+                Payment p = payments.FirstOrDefault(o => o.date == dt && o.playerId == cplayer.Id);
                 result = "У этого человека в этот день уже есть платеж";
                 return result;
             }

@@ -36,9 +36,15 @@ namespace Acc
             changeDate();
             players = Player.LoadFromFile();
             payments = Payment.LoadFromFile();
+            //migrations();
             ReloadDataGrid();
             datagrid.ContextMenu = contextMenuDataGrid;
+        }
 
+        public void migrations()
+        {
+            payments = payments.Where(o => o.price != 0).ToList();
+            Payment.SaveToFile(payments);
         }
 
 
