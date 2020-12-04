@@ -239,8 +239,7 @@ namespace Acc
                 MessageBox.Show("Платеж не найден, обратитесь к разработчику");
                 return;
             }
-            return;
-            var form = new PaymentWindow(mk, payments);
+            var form = new PaymentWindow(mk, p, payments);
             form.ShowDialog();
             //Player.SaveToFile("players", players);
             ReloadDataGrid();

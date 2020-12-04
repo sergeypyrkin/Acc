@@ -30,12 +30,38 @@
 
         </StackPanel>
         <Button
+                Canvas.Left="72" Canvas.Top="312"
+            x:Name="b1"
             Width="424"
             Height="55"
             MinWidth="100"
             Background="White"
-            Click="createPayment" Canvas.Left="72" Canvas.Top="312">
+            Click="createPayment" >
             ДОБАВИТЬ
+        </Button>
+
+        <Button
+                Canvas.Left="10" Canvas.Top="312"
+                x:Name="b2"
+
+                Width="106"
+                Height="55"
+                MinWidth="100"
+                Background="White"
+                Click="removePayment" >
+            УДАЛИТЬ
+        </Button>
+
+        <Button
+                Canvas.Left="147" Canvas.Top="312"
+                x:Name="b3"
+
+                Width="249"
+                Height="55"
+                MinWidth="100"
+                Background="White"
+                Click="savePayment" >
+            СОХРАНИТЬ
         </Button>
     </Canvas>
 </Window>

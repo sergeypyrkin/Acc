@@ -22,7 +22,9 @@ namespace Acc.Gui
     {
 
         public CalendarPlayer cplayer;
+        public Payment p;
         public List<Payment> payments;
+        public string mode = "";
         public PaymentWindow(CalendarPlayer cplayer, List<Payment> payments)
         {
             this.cplayer = cplayer;
@@ -30,7 +32,28 @@ namespace Acc.Gui
             InitializeComponent();
             datePicker1.SelectedDate = DateTime.Today;
             nameUser.Content = cplayer.Name;
+            mode = "new";
+            b1.Visibility = Visibility.Visible;
+            b2.Visibility = Visibility.Hidden;
+            b3.Visibility = Visibility.Hidden;
 
+        }
+
+
+        public PaymentWindow(CalendarPlayer cplayer, Payment p,  List<Payment> payments)
+        {
+            this.cplayer = cplayer;
+            this.payments = payments;
+            this.p = p;
+            InitializeComponent();
+            datePicker1.SelectedDate = p.date;
+            datePicker1.IsEnabled = false;
+            price.Text = p.price.ToString();
+            nameUser.Content = cplayer.Name;
+            mode = "edit";
+            b1.Visibility = Visibility.Hidden;
+            b2.Visibility = Visibility.Visible;
+            b3.Visibility = Visibility.Visible;
         }
 
 
@@ -119,6 +142,14 @@ namespace Acc.Gui
                 return result;
             }
             return "";
+        }
+
+        private void removePayment(object sender, RoutedEventArgs e)
+        {
+        }
+
+        private void savePayment(object sender, RoutedEventArgs e)
+        {
         }
     }
 }
