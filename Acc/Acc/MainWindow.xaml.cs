@@ -227,6 +227,23 @@ namespace Acc
 
         private void UIChangePrice(object sender, MouseButtonEventArgs e)
         {
+
+            var item = datagrid.SelectedItems[0];
+            CalendarPlayer mk = item as CalendarPlayer;
+            Label l = sender as Label;
+            string Tag = l.Tag.ToString();
+            DateTime d = resolveDayByTag(Tag);
+            Payment p = payments.FirstOrDefault(o => o.playerId == mk.player.Id && o.date == d);
+            if (p == null)
+            {
+                MessageBox.Show("Платеж не найден, обратитесь к разработчику");
+                return;
+            }
+            return;
+            var form = new PaymentWindow(mk, payments);
+            form.ShowDialog();
+            //Player.SaveToFile("players", players);
+            ReloadDataGrid();
         }
 
 
@@ -241,12 +258,24 @@ namespace Acc
             addPayment(mk);
         }
 
-        private void  addPayment(CalendarPlayer mk)
+        private void addPayment(CalendarPlayer mk)
         {
             var form = new PaymentWindow(mk, payments);
             form.ShowDialog();
             //Player.SaveToFile("players", players);
             ReloadDataGrid();
+        }
+
+        public DateTime resolveDayByTag(string tag)
+        {
+            String[] ll = tag.Split(new string[] { "L" }, StringSplitOptions.None);
+            if (ll.Length == 1)
+            {
+                return date;
+            }
+            string s = ll[1];
+            int si = Convert.ToInt32(s);
+            return date.AddDays(-si);
         }
     }
 }
