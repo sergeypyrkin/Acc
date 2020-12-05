@@ -144,12 +144,66 @@ namespace Acc.Gui
             return "";
         }
 
+        public string isValidPayment2()
+        {
+            string result = "";
+            if (price.Text == "")
+            {
+                result = "Поле платеж не должно быть пустое";
+                int value;
+
+                bool success = Int32.TryParse(price.Text, out value);
+                if (!success)
+                {
+                    result = "Поле платеж должно быть целым значением";
+                    return result;
+                }
+
+            }
+
+            if (price.Text != "")
+            {
+                int value;
+
+                bool success = Int32.TryParse(price.Text, out value);
+                if (!success)
+                {
+                    result = "Поле платеж должно быть целым значением";
+                    return result;
+                }
+
+            }
+
+            if (price.Text == "0")
+            {
+
+                result = "Платеж не может быть нулевым";
+                return result;
+
+            }
+
+
+            return "";
+        }
+
         private void removePayment(object sender, RoutedEventArgs e)
         {
         }
 
         private void savePayment(object sender, RoutedEventArgs e)
         {
+
+            string validText = isValidPayment2();
+            if (!String.IsNullOrEmpty(validText))
+            {
+                MessageBox.Show(validText);
+                return;
+            }
+
+            p.price = Convert.ToInt32(price.Text);
+            Payment.SaveToFile(payments);
+            DialogResult = true;
+
         }
     }
 }
