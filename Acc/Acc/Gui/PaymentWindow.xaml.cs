@@ -188,6 +188,9 @@ namespace Acc.Gui
 
         private void removePayment(object sender, RoutedEventArgs e)
         {
+            payments.Remove(p);
+            Payment.SaveToFile(payments);
+            DialogResult = true;
         }
 
         private void savePayment(object sender, RoutedEventArgs e)
