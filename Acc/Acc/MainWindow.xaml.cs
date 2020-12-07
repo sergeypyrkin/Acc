@@ -111,6 +111,8 @@ namespace Acc
 
         private void add_game(object sender, RoutedEventArgs e)
         {
+            GameWindow gm = new GameWindow();
+            gm.ShowDialog();
         }
 
         private void add_players(object sender, RoutedEventArgs e)

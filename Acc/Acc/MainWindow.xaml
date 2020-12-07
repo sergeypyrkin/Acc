@@ -66,16 +66,6 @@
                 Click="add_players">
                 ADD PLAYER
             </Button>
-
-            <Button
-                Width="Auto"
-                Height="55"
-                MinWidth="100"
-                Margin="5"
-                Background="White"
-                Click="game_list">
-                GAME LIST
-            </Button>
             <StackPanel Margin="100,0,0,0" Orientation="Horizontal">
                 <DatePicker
                     x:Name="datePicker1"
