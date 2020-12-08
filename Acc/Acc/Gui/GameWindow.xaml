@@ -12,17 +12,11 @@
     mc:Ignorable="d">
 
     <Window.Resources>
-        <Style TargetType="Label" x:Key="FlatStyleButton1">
-            <Setter Property="FontSize" Value="10" />
-            <Setter Property="Margin" Value="-7 0 5 0" />
-            <Setter Property="Padding" Value="0" />
-            <Setter Property="Foreground" Value="Red" />
+        <Style TargetType="Button" x:Key="FlatStyleButton1">
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="Width" Value="20" />
+            <Setter Property="Height" Value="20" />
 
-            <Style.Triggers>
-                <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Cursor" Value="Hand" />
-                </Trigger>
-            </Style.Triggers>
         </Style>
 
         <Style TargetType="Label" x:Key="FlatStyleButton2">
@@ -48,6 +42,7 @@
 
         <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
             <Image Source="../bbal2.ico" Width="40" Margin="10 0 0 0"></Image>
+            <Label Margin="10 0 0 0" x:Name="colL" VerticalContentAlignment="Center" FontSize="20" Width="40">20</Label>
             <StackPanel Margin="100,0,0,0" Orientation="Horizontal">
                 
                 <DatePicker
@@ -120,6 +115,34 @@
                         Width="150"
                         DisplayMemberBinding="{Binding Name}"
                         Header="Name" />
+
+                    <GridViewColumn Width="40" Header="">
+  
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="+"  Style="{StaticResource FlatStyleButton1}" MouseUp="plusAction"></Button>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+
+
+                    <GridViewColumn Width="40" Header="">
+
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Label Content="{Binding sN}" FontSize="20" FontWeight="Bold"></Label>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+
+                    <GridViewColumn Width="40" Header="">
+
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="-"  Style="{StaticResource FlatStyleButton1}" MouseUp="minusAction"></Button>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
 
                 </GridView>
             </ListView.View>

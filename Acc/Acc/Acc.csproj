@@ -79,6 +79,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Entity\CalendarPlayer.cs" />
+    <Compile Include="Entity\GamePlayer.cs" />
     <Compile Include="Entity\Payment.cs" />
     <Compile Include="Entity\Player.cs" />
     <Compile Include="Gui\GameWindow.xaml.cs">
