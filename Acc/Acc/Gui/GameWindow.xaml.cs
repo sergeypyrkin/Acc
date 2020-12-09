@@ -23,6 +23,8 @@ namespace Acc.Gui
 
         public List<Player> players;
         public List<GamePlayer> gplayers = new List<GamePlayer>();
+        public GamePlayer ovPlayer;
+
         public GameWindow(List<Player> players)
         {
             InitializeComponent();
@@ -37,6 +39,7 @@ namespace Acc.Gui
         {
             datagrid.ItemsSource = gplayers;
             datagrid.Items.Refresh();
+            colL.Content = gplayers.Sum(o => o.N);
         }
 
         private void fillPlayers()
@@ -61,12 +64,27 @@ namespace Acc.Gui
         {
         }
 
-        private void plusAction(object sender, MouseButtonEventArgs e)
+
+        private void ut(object sender, MouseEventArgs e)
         {
+            ListViewItem lv = sender as ListViewItem;
+            ovPlayer = lv.Content as GamePlayer;
         }
 
-        private void minusAction(object sender, MouseButtonEventArgs e)
+        private void minusAction(object sender, RoutedEventArgs e)
         {
+            if (ovPlayer.N == 0)
+            {
+                return;
+            }
+            ovPlayer.N = ovPlayer.N - 1;
+            updateGrid();
+        }
+
+        private void plusAction(object sender, RoutedEventArgs e)
+        {
+            ovPlayer.N = ovPlayer.N + 1;
+            updateGrid();
         }
     }
 }
